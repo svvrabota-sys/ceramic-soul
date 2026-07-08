@@ -1,0 +1,44 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    &__logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    &__icons {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+
+        a {
+            display: block;
+            color: $dark;
+        }
+
+        span {
+            display: block;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    height: 23px;
+    row-gap: 10px;
+    padding-right: 35px;
+
+    span {
+        display: block;
+        /* На span если нужно ставить размер высоты и ширины обязательно нужно перевести его в блочный элемент потомучто он по умолчанию строчный inline */
+        width: 20px;
+        height: 1px;
+        background-color: $dark;
+    }
+}
